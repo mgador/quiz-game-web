@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Russo One", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../Icons/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-color 0.5s ease;
+}
+
+.quiz-container {
+  background-color: #424040;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+}
+button {
+  background-color: #fc8803;
+  color: #fff;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 1rem;
+  height: auto;
+}
+
+button:hover {
+  background-color: #ff6600;
+}
+
+button:focus {
+  outline: none;
+  background-color: #44b927;
+}
+input[type="radio"] {
+  margin: 13px;
+  justify-content: left;
+  align-items: left;
+}
+.card {
+  margin: auto;
+  background-color: #e6e6e6;
+}

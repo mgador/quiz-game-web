@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Score</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.google.com/specimen/Lilita+One?preview.text=High%20Score&preview.text_type=custom"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+      @import url("https://fonts.cdnfonts.com/css/typeface-mario-world-pixel-filled");
+      @import url("https://fonts.cdnfonts.com/css/phatone");
+
+      /* Custom styles */
+      * {
+        box-sizing: border-box;
+        font-family: "Typeface Mario World Pixel Filled", sans-serif;
+        font-family: "Typeface Mario World Pixel Outline", sans-serif;
+        font-size: 30px;
+        color: #2b2b2b;
+      }
+
+      body {
+        background-image: url("../Icons/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-color 1s ease;
+        padding: 20px;
+        background-color: #e5e3e6;
+      }
+
+      .back-btn {
+        margin-bottom: 20px;
+      }
+      .header {
+        background-color: #fc8803;
+        padding: 2px;
+        box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin: auto;
+      }
+      h1 {
+        font-family: "Russo One", sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 80px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .custom-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0%;
+      }
+      button.back-btn {
+        font-family: "Russo One", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="btn btn-primary back-btn" onclick="redirectHome()">
+      Back
+    </button>
+
+    <div class="container">
+      <div class="header">
+        <h1>
+          <img
+            src="../Icons/trophy.png"
+            alt="Custom Icon"
+            class="custom-icon"
+          />
+          High Score
+        </h1>
+      </div>
+      <div id="highScore"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function redirectHome() {
+        window.location.href = "../Pages/index.html";
+      }
+
+      $(document).ready(function () {
+        $.ajax({
+          url: "../Server/top_score.php",
+          type: "GET",
+          dataType: "html",
+          success: function (response) {
+            // Parse the response HTML string into a jQuery object
+            var html = $.parseHTML(response);
+
+            // Add the "Rank" column header
+            $(html).find("thead tr").prepend("<th>Rank</th>");
+
+            // Add the "Rank" column to each row
+            $(html)
+              .find("tbody tr")
+              .each(function (index) {
+                $(this).prepend("<td>" + (index + 1) + "</td>");
+              });
+
+            // Insert the modified table into the highScore div
+            $("#highScore").html(html);
+          },
+          error: function () {
+            alert("Error occurred while retrieving data.");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

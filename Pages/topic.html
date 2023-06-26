@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PHP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+    /* Custom styles */
+    body {
+
+      background-image: url("../Icons/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background-color 0.5s ease;
+    }
+
+    .container {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      margin-bottom: 20px;
+      font-family: "Russo One", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn btn-primary back-btn" onclick="returnHome()">
+    Back
+  </button>
+  <div class="container">
+    <h1>About PHP</h1>
+    <p>
+      PHP (Hypertext Preprocessor) is a popular server-side scripting language
+      primarily used for web development. It was created by Rasmus Lerdorf in
+      1994 and has since evolved into a powerful and widely adopted
+      programming language.
+    </p>
+    <p>Here are some key aspects and features of PHP:</p>
+    <ol>
+      <li>
+        <strong>Server-side scripting</strong>: PHP is executed on the
+        server-side, meaning the code is processed on the web server before
+        being sent to the client's browser. This allows for dynamic web page
+        generation, database interactions, and other server-related tasks.
+      </li>
+      <li>
+        <strong>Open-source</strong>: PHP is an open-source language, which
+        means it is freely available for anyone to use, modify, and
+        distribute. Its open nature has fostered a large and active community
+        of developers who contribute to its growth and improvement.
+      </li>
+      <li>
+        <strong>Syntax</strong>: PHP syntax is similar to C, Java, and other
+        languages, making it relatively easy to learn and work with if you're
+        familiar with those languages. It also incorporates HTML and can be
+        embedded within it, allowing for seamless integration with web
+        content.
+      </li>
+      <li>
+        <strong>Wide platform support</strong>: PHP runs on various platforms,
+        including Windows, macOS, Linux, and most web servers. It also
+        supports numerous databases, such as MySQL, PostgreSQL, Oracle, and
+        SQLite, facilitating easy data storage and retrieval.
+      </li>
+      <li>
+        <strong>Web development</strong>: PHP is widely used for web
+        development. It provides powerful tools and libraries for handling
+        HTTP requests, managing sessions, working with databases, processing
+        forms, handling file uploads, and more. It can generate dynamic web
+        pages, create content management systems (CMS), and build e-commerce
+        platforms.
+      </li>
+      <li>
+        <strong>Intergration</strong>: PHP can work alongside HTML,
+        JavaScript, CSS, and other web technologies. It can be embedded
+        directly within HTML code using opening and closing tags (
+        &lt;&quest;php ... &quest;&gt;), allowing developers to mix PHP logic
+        with presentation code. This makes it easy to create dynamic web pages
+        that interact with databases and respond to user input.
+      </li>
+      <li>
+        <strong>Extensibility</strong>: PHP has a vast selection of extensions
+        and frameworks available, providing additional functionality and
+        simplifying development tasks. Popular frameworks like Laravel,
+        Symfony, and CodeIgniter offer structured patterns and libraries for
+        building robust web applications more efficiently.
+      </li>
+      <li>
+        <strong>Community and resources</strong>: PHP has a large and active
+        community of developers who contribute to online forums, provide
+        tutorials, and create libraries and tools. This makes it easy to find
+        support, learn from others, and leverage existing code to accelerate
+        development.
+      </li>
+      <li>
+        <strong>Security</strong>: PHP offers various built-in security
+        features, such as input validation, secure database access, and
+        protection against common web vulnerabilities like cross-site
+        scripting (XSS) and SQL injection. However, it's crucial to follow
+        best practices and adhere to secure coding guidelines to ensure the
+        safety of PHP applications.
+      </li>
+    </ol>
+    <p>
+      PHP has undergone significant improvements over the years, with each
+      version introducing new features, performance enhancements, and bug
+      fixes. It continues to be widely used in the industry, powering
+      countless websites and web applications due to its flexibility, ease of
+      use, and extensive ecosystem.
+    </p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+    function returnHome() {
+      window.location.href = "../Pages/index.html";
+    }
+  </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About php</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <button onclick="returnHome()">Back</button>
+    <p>
+      PHP (Hypertext Preprocessor) is a popular server-side scripting language
+      primarily used for web development. It was created by Rasmus Lerdorf in
+      1994 and has since evolved into a powerful and widely adopted programming
+      language.
+    </p>
+    <p>Here are some key aspects and features of PHP:</p>
+    <ol>
+      <li>
+        <strong>Server-side scripting</strong>: PHP is executed on the
+        server-side, meaning the code is processed on the web server before
+        being sent to the client's browser. This allows for dynamic web page
+        generation, database interactions, and other server-related tasks.
+      </li>
+      <li>
+        <strong>Open-source</strong>: PHP is an open-source language, which
+        means it is freely available for anyone to use, modify, and distribute.
+        Its open nature has fostered a large and active community of developers
+        who contribute to its growth and improvement.
+      </li>
+      <li>
+        <strong>Syntax</strong>: PHP syntax is similar to C, Java, and other
+        languages, making it relatively easy to learn and work with if you're
+        familiar with those languages. It also incorporates HTML and can be
+        embedded within it, allowing for seamless integration with web content.
+      </li>
+      <li>
+        <strong>Wide platform support</strong>: PHP runs on various platforms,
+        including Windows, macOS, Linux, and most web servers. It also supports
+        numerous databases, such as MySQL, PostgreSQL, Oracle, and SQLite,
+        facilitating easy data storage and retrieval.
+      </li>
+      <li>
+        <strong>Web development</strong>: PHP is widely used for web
+        development. It provides powerful tools and libraries for handling HTTP
+        requests, managing sessions, working with databases, processing forms,
+        handling file uploads, and more. It can generate dynamic web pages,
+        create content management systems (CMS), and build e-commerce platforms.
+      </li>
+      <li>
+        <strong>Intergration</strong>: PHP can work alongside HTML, JavaScript,
+        CSS, and other web technologies. It can be embedded directly within HTML
+        code using opening and closing tags ( &lt;&quest;php ... &quest;&gt;),
+        allowing developers to mix PHP logic with presentation code. This makes
+        it easy to create dynamic web pages that interact with databases and
+        respond to user input.
+      </li>
+      <li>
+        <strong>Extensibility</strong>: PHP has a vast selection of extensions
+        and frameworks available, providing additional functionality and
+        simplifying development tasks. Popular frameworks like Laravel, Symfony,
+        and CodeIgniter offer structured patterns and libraries for building
+        robust web applications more efficiently.
+      </li>
+      <li>
+        <strong>Community and resources</strong>: PHP has a large and active
+        community of developers who contribute to online forums, provide
+        tutorials, and create libraries and tools. This makes it easy to find
+        support, learn from others, and leverage existing code to accelerate
+        development.
+      </li>
+      <li>
+        <strong>Security</strong>: PHP offers various built-in security
+        features, such as input validation, secure database access, and
+        protection against common web vulnerabilities like cross-site scripting
+        (XSS) and SQL injection. However, it's crucial to follow best practices
+        and adhere to secure coding guidelines to ensure the safety of PHP
+        applications.
+      </li>
+    </ol>
+    <p>
+      PHP has undergone significant improvements over the years, with each
+      version introducing new features, performance enhancements, and bug fixes.
+      It continues to be widely used in the industry, powering countless
+      websites and web applications due to its flexibility, ease of use, and
+      extensive ecosystem.
+    </p>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function returnHome() {
+        window.location.href = "../Pages/index.html";
+      }
+    </script>
+  </body>
+</html> -->
